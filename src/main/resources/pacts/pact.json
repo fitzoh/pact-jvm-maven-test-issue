@@ -1,0 +1,36 @@
+{
+    "consumer": {
+        "name": "consumer"
+    },
+    "provider": {
+        "name": "provider"
+    },
+    "messages": [
+        {
+            "description": "a test message",
+            "metaData": {
+                "Content-Type": "application/json; charset=UTF-8"
+            },
+            "contents": {
+                "integerThing": 972574887,
+                "stringThing": "BCCjPqXGtcWsXrqSiJeU"
+            },
+            "matchingRules": {
+                "$.body.stringThing": {
+                    "match": "type"
+                },
+                "$.body.integerThing": {
+                    "match": "integer"
+                }
+            }
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.3.6"
+        }
+    }
+}
